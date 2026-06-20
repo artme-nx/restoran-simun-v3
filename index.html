@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restoran &amp; Pizzeria Šimun — Vodice | Obiteljski stol u srcu Dalmacije</title>
+<meta name="description" content="Obiteljski restoran i pizzeria Šimun u srcu Vodica. Svježa jadranska riba s gradela, hobotnica, lignje, domaća tjestenina i pizza iz krušne peći. Doček rakijom. TripAdvisor 4.4★, #8 od 86 u Vodicama." />
+<link rel="canonical" href="https://artme-nx.github.io/restoran-simun-v3/" />
+
+<meta property="og:type" content="restaurant" />
+<meta property="og:locale" content="hr_HR" />
+<meta property="og:title" content="Restoran &amp; Pizzeria Šimun — Vodice" />
+<meta property="og:description" content="Obiteljski stol u srcu Vodica. Riba s gradela, rakija za doček. Svježi ulov, domaća tjestenina i pizza iz krušne peći." />
+<meta property="og:url" content="https://artme-nx.github.io/restoran-simun-v3/" />
+<meta property="og:site_name" content="Restoran &amp; Pizzeria Šimun" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restoran & Pizzeria Šimun",
+  "description": "Obiteljski restoran i pizzeria u srcu Vodica. Svježa jadranska riba s gradela, domaća tjestenina i pizza iz krušne peći.",
+  "servesCuisine": ["Mediterranean", "Seafood", "Croatian", "Pizza"],
+  "url": "https://artme-nx.github.io/restoran-simun-v3/",
+  "telephone": "+38522440656",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vodice",
+    "addressRegion": "Dalmacija",
+    "addressCountry": "HR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "bestRating": "5",
+    "ratingCount": "86"
+  },
+  "acceptsReservations": "True",
+  "availableLanguage": ["hr", "en", "de"]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#F5F1E8;
+    --terra:#B5784A;
+    --charcoal:#2C2C2C;
+    --olive:#5B6B3A;
+    --sage:#A3B18A;
+    --stone:#8C7F72;
+    --paper:#EFE9DC;
+    --line:rgba(44,44,44,.14);
+    --font-display:'Cormorant Garamond', Georgia, serif;
+    --font-body:'DM Sans', system-ui, sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--font-body);
+    background:var(--bg);
+    color:var(--charcoal);
+    font-weight:400;
+    line-height:1.7;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  /* grain overlay */
+  body::after{
+    content:"";position:fixed;inset:0;z-index:9000;pointer-events:none;
+    opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+  .eyebrow{
+    font-family:var(--font-body);text-transform:uppercase;
+    letter-spacing:.22em;font-size:11px;font-weight:500;color:var(--terra);
+  }
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:.005em}
+  .italic{font-style:italic}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;top:0;left:0;width:100%;z-index:1000;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px clamp(20px,5vw,64px);
+    transition:background .5s ease, padding .5s ease, box-shadow .5s ease;
+  }
+  header.scrolled{background:rgba(245,241,232,.92);backdrop-filter:blur(8px);padding:12px clamp(20px,5vw,64px);box-shadow:0 1px 0 var(--line)}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:24px;letter-spacing:.02em}
+  .logo svg{width:26px;height:26px;flex:none;color:var(--terra)}
+  .logo b{font-weight:600}
+  nav.main{display:flex;align-items:center;gap:30px}
+  nav.main ul{display:flex;gap:28px;list-style:none}
+  nav.main a{font-size:13px;letter-spacing:.04em;color:var(--charcoal);position:relative;padding:4px 0}
+  nav.main a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--terra);transition:width .35s ease}
+  nav.main a:hover::after{width:100%}
+  .lang{display:flex;gap:8px;font-size:12px;letter-spacing:.06em;color:var(--stone)}
+  .lang span{cursor:pointer;transition:color .3s}
+  .lang span.active,.lang span:hover{color:var(--charcoal)}
+  .btn-reserve{
+    font-family:var(--font-body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--terra);color:#fff;padding:13px 22px;border-radius:2px;
+    transition:background .35s ease, transform .35s ease;white-space:nowrap;
+  }
+  .btn-reserve:hover{background:var(--charcoal);transform:translateY(-1px)}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .hamburger span{width:26px;height:2px;background:var(--charcoal);transition:.3s}
+
+  /* mobile nav */
+  .mobile-nav{
+    position:fixed;inset:0;z-index:999;background:var(--bg);
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;
+    transform:translateY(-100%);transition:transform .6s cubic-bezier(.7,0,.2,1);
+  }
+  .mobile-nav.open{transform:translateY(0)}
+  .mobile-nav a{font-family:var(--font-display);font-size:34px;color:var(--charcoal)}
+  .mobile-nav .lang{font-family:var(--font-body);font-size:14px;margin-top:14px}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;align-items:flex-end}
+  .hero-grid{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:0}
+  .hero-cell{position:relative;overflow:hidden;background:var(--paper)}
+  .hero-cell::before{content:"";position:absolute;inset:0;z-index:1}
+  .hero-cell:nth-child(1)::before{background:linear-gradient(135deg,#caa37a,#8c6a4a)}
+  .hero-cell:nth-child(2)::before{background:linear-gradient(135deg,#7d8a5c,#4d5a32)}
+  .hero-cell:nth-child(3)::before{background:linear-gradient(135deg,#9c8c7c,#6b5d4f)}
+  .hero-cell:nth-child(4)::before{background:linear-gradient(135deg,#c08a55,#8a5a30)}
+  .hero-cell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;filter:sepia(.2) contrast(1.06) saturate(.9) brightness(.82)}
+  .hero-overlay{position:absolute;inset:0;z-index:3;background:linear-gradient(to top,rgba(28,24,20,.72) 0%,rgba(28,24,20,.18) 45%,rgba(28,24,20,.32) 100%)}
+  .hero-content{position:relative;z-index:4;width:100%;padding:0 clamp(20px,5vw,64px) clamp(48px,8vh,96px)}
+  .hero-content .eyebrow{color:#e7c9a4}
+  .hero-content h1{
+    color:#F7F2E8;font-size:clamp(40px,7vw,92px);font-weight:500;max-width:14ch;margin:14px 0 18px;
+  }
+  .hero-content .lede{color:rgba(247,242,232,.86);font-family:var(--font-display);font-style:italic;font-size:clamp(19px,2.6vw,28px);max-width:34ch;line-height:1.45}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:4;color:rgba(247,242,232,.8);font-size:10px;letter-spacing:.25em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-cue::after{content:"";width:1px;height:42px;background:rgba(247,242,232,.5);animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%,100%{transform:scaleY(.3);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+  /* ---------- divider ---------- */
+  .divider{display:flex;align-items:center;justify-content:center;gap:20px;padding:clamp(40px,7vw,80px) 0;color:var(--terra)}
+  .divider .ln{height:1px;width:min(120px,18vw);background:var(--line)}
+  .divider svg{width:46px;height:46px;flex:none}
+
+  /* ---------- sections ---------- */
+  section{position:relative}
+  .pad{padding:clamp(60px,10vw,130px) 0}
+  .reveal{opacity:0;transform:translateY(28px)}
+
+  /* kuhinja */
+  .kuhinja{text-align:center}
+  .kuhinja .eyebrow{display:block;margin-bottom:18px}
+  .kuhinja h2{font-size:clamp(32px,5vw,58px);max-width:18ch;margin:0 auto 26px}
+  .kuhinja p{max-width:60ch;margin:0 auto;color:var(--stone);font-size:clamp(16px,1.6vw,19px)}
+  .kuhinja .pull{font-family:var(--font-display);font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--olive);max-width:24ch;margin:38px auto 0;line-height:1.35}
+
+  /* story chapters */
+  .story .chapter{
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);align-items:center;
+    padding:clamp(36px,5vw,60px) 0;
+  }
+  .story .chapter:nth-child(even) .ch-media{order:2}
+  .ch-media{position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:var(--paper)}
+  .ch-media::before{content:"";position:absolute;inset:0;z-index:1}
+  .ch-media.m1::before{background:linear-gradient(140deg,#b98a5c,#7d5733)}
+  .ch-media.m2::before{background:linear-gradient(140deg,#7d8a5c,#46522e)}
+  .ch-media.m3::before{background:linear-gradient(140deg,#a8895f,#6f4f2c)}
+  .ch-media.m4::before{background:linear-gradient(140deg,#9c8c7c,#5e5247)}
+  .ch-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;filter:sepia(.2) contrast(1.08) saturate(.85)}
+  .ch-num{font-family:var(--font-display);font-style:italic;font-size:18px;color:var(--terra)}
+  .ch-text h3{font-size:clamp(26px,3.6vw,42px);margin:10px 0 16px}
+  .ch-text p{color:var(--stone);max-width:42ch}
+
+  /* dishes — s mora na stol */
+  .dishes{background:var(--paper)}
+  .dishes .head{text-align:center;margin-bottom:clamp(36px,6vw,60px)}
+  .dishes .head h2{font-size:clamp(32px,5vw,58px);margin:14px 0 16px}
+  .dishes .head p{color:var(--stone);max-width:52ch;margin:0 auto}
+  .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
+  .menu-block h4{font-family:var(--font-display);font-style:italic;font-size:22px;color:var(--olive);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .dish{padding:15px 0;border-bottom:1px solid var(--line)}
+  .dish .name{font-family:var(--font-display);font-size:24px;font-weight:500;display:flex;align-items:baseline;gap:10px}
+  .dish .hr{font-size:13px;color:var(--terra);font-style:italic;font-family:var(--font-display)}
+  .dish .desc{font-size:14px;color:var(--stone);margin-top:3px}
+  .menu-note{text-align:center;margin-top:36px;color:var(--stone);font-style:italic;font-family:var(--font-display);font-size:18px}
+
+  /* atmosfera */
+  .atmo{text-align:center}
+  .atmo blockquote{font-family:var(--font-display);font-style:italic;font-size:clamp(26px,4.4vw,52px);line-height:1.3;max-width:20ch;margin:0 auto;color:var(--charcoal)}
+  .atmo blockquote span{color:var(--terra)}
+  .atmo .sub{margin:30px auto 0;max-width:50ch;color:var(--stone)}
+
+  /* gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .gx{position:relative;overflow:hidden;background:var(--paper);aspect-ratio:1}
+  .gx.tall{grid-row:span 2;aspect-ratio:auto}
+  .gx::before{content:"";position:absolute;inset:0;z-index:1}
+  .gx:nth-child(1)::before{background:linear-gradient(135deg,#b98a5c,#7d5733)}
+  .gx:nth-child(2)::before{background:linear-gradient(135deg,#7d8a5c,#46522e)}
+  .gx:nth-child(3)::before{background:linear-gradient(135deg,#a8895f,#6f4f2c)}
+  .gx:nth-child(4)::before{background:linear-gradient(135deg,#c08a55,#8a5a30)}
+  .gx:nth-child(5)::before{background:linear-gradient(135deg,#9c8c7c,#5e5247)}
+  .gx:nth-child(6)::before{background:linear-gradient(135deg,#8a6a4a,#5b4530)}
+  .gx img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;filter:sepia(.2) contrast(1.08) saturate(.85);transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}
+  .gx:hover img{transform:scale(1.05)}
+  .gx .cap{position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;padding:16px;opacity:0;transition:opacity .5s ease;background:linear-gradient(to top,rgba(28,24,20,.7),transparent 60%)}
+  .gx:hover .cap{opacity:1}
+  .gx .cap span{color:#F7F2E8;font-family:var(--font-display);font-style:italic;font-size:17px;letter-spacing:.02em}
+
+  /* footer */
+  footer{background:var(--charcoal);color:#E8E1D4;padding:clamp(60px,9vw,110px) 0 40px;text-align:center}
+  footer .ft-quote{font-family:var(--font-display);font-style:italic;font-size:clamp(28px,5vw,52px);color:#F2EADB;margin-bottom:18px}
+  footer .ft-tag{color:var(--sage);font-style:italic;font-family:var(--font-display);font-size:20px;max-width:30ch;margin:0 auto 40px}
+  .ft-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(30px,6vw,80px);margin-bottom:46px;text-align:left}
+  .ft-col h5{font-family:var(--font-body);text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--stone);margin-bottom:12px}
+  .ft-col p,.ft-col a{font-size:15px;color:#E8E1D4;line-height:1.9;display:block}
+  .ft-col a:hover{color:var(--terra)}
+  .stars{color:var(--terra);letter-spacing:2px}
+  .ft-cta{display:inline-block;border:1px solid var(--terra);color:#F2EADB;padding:14px 30px;border-radius:2px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:.35s}
+  .ft-cta:hover{background:var(--terra)}
+  .ft-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:24px;font-size:12px;color:var(--stone);letter-spacing:.04em}
+
+  /* sticky mobile bar */
+  .mobile-bar{
+    position:fixed;bottom:0;left:0;width:100%;z-index:980;display:none;
+    grid-template-columns:1fr 1fr;background:var(--charcoal);
+    box-shadow:0 -4px 24px rgba(0,0,0,.2);
+  }
+  .mobile-bar a{padding:15px;text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#F2EADB;display:flex;align-items:center;justify-content:center;gap:7px}
+  .mobile-bar a.call{background:var(--terra)}
+  .mobile-bar svg{width:15px;height:15px}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    nav.main ul,nav.main .lang{display:none}
+    .hamburger{display:flex}
+    nav.main{gap:14px}
+  }
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,1fr)}
+    .hero{align-items:flex-end}
+    .story .chapter{grid-template-columns:1fr;gap:24px}
+    .story .chapter:nth-child(even) .ch-media{order:0}
+    .ch-media{aspect-ratio:16/11}
+    .menu-cols{grid-template-columns:1fr;gap:38px}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .gx.tall{grid-row:span 1;aspect-ratio:1}
+    .btn-reserve{display:none}
+    .mobile-bar{display:grid}
+    footer{padding-bottom:80px}
+    .ft-grid{flex-direction:column;align-items:center;text-align:center;gap:30px}
+    .ft-col p,.ft-col a{text-align:center}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1!important;transform:none!important}
+    .scroll-cue::after{animation:none}
+    *{scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="logo" aria-label="Šimun, početna">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+      <path d="M2 12c3-4 9-4 12 0-3 4-9 4-12 0Z"/><circle cx="5.5" cy="12" r=".7" fill="currentColor" stroke="none"/><path d="M14 12c2-2 5-2 8 0-3 3-6 3-8 0Z"/>
+    </svg>
+    <span><b>Šimun</b></span>
+  </a>
+  <nav class="main">
+    <ul>
+      <li><a href="#kuhinja">Kuhinja</a></li>
+      <li><a href="#prica">Naša priča</a></li>
+      <li><a href="#jela">S mora na stol</a></li>
+      <li><a href="#atmosfera">Atmosfera</a></li>
+      <li><a href="#galerija">Galerija</a></li>
+    </ul>
+    <div class="lang"><span class="active">HR</span><span>EN</span><span>DE</span></div>
+    <a href="tel:+38522440656" class="btn-reserve">Rezerviraj stol</a>
+    <button class="hamburger" id="ham" aria-label="Izbornik"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mnav">
+  <a href="#kuhinja">Kuhinja</a>
+  <a href="#prica">Naša priča</a>
+  <a href="#jela">S mora na stol</a>
+  <a href="#atmosfera">Atmosfera</a>
+  <a href="#galerija">Galerija</a>
+  <div class="lang"><span class="active">HR</span><span>EN</span><span>DE</span></div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-cell"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1100&q=80" alt="Riba s gradela" onerror="this.style.display='none'"></div>
+    <div class="hero-cell"><img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1100&q=80" alt="Maslina i obala" onerror="this.style.display='none'"></div>
+    <div class="hero-cell"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1100&q=80" alt="Pizza iz krušne peći" onerror="this.style.display='none'"></div>
+    <div class="hero-cell"><img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=1100&q=80" alt="Stol uz svjećicu" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content wrap">
+    <span class="eyebrow">Restoran &amp; Pizzeria · U srcu Vodica, Dalmacija</span>
+    <h1>Obiteljski stol u srcu Vodica.</h1>
+    <p class="lede">Riba s gradela, rakija za doček — sve ostalo ispriča more, kamen i naša kuhinja.</p>
+  </div>
+  <div class="scroll-cue">Listaj</div>
+</section>
+
+<!-- divider -->
+<div class="divider wrap"><span class="ln"></span>
+  <svg viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+    <path d="M32 12c0-6 6-8 12-8M32 12c0 6 6 8 12 8M32 12c0-6-6-8-12-8M32 12c0 6-6 8-12 8M32 4v16"/>
+    <circle cx="44" cy="4" r="1.6" fill="currentColor" stroke="none"/><circle cx="44" cy="20" r="1.6" fill="currentColor" stroke="none"/>
+    <circle cx="20" cy="4" r="1.6" fill="currentColor" stroke="none"/><circle cx="20" cy="20" r="1.6" fill="currentColor" stroke="none"/>
+  </svg>
+  <span class="ln"></span>
+</div>
+
+<!-- KUHINJA -->
+<section id="kuhinja" class="kuhinja pad wrap">
+  <span class="eyebrow reveal">Naša kuhinja</span>
+  <h2 class="reveal">Obiteljska kuhinja u kojoj se ništa ne žuri.</h2>
+  <p class="reveal">Ujutro dolazi svjež ulov, popodne se mijesi tijesto, navečer se loži gradela i krušna peć. Kuhamo onako kako se kuhalo za našim stolom — jednostavno, pošteno, s mirisom maslinova ulja, mora i dima. Tjesteninu valjamo doma, ribu pečemo na žaru, a goste dočekujemo čašicom domaće rakije.</p>
+  <p class="pull italic reveal">„Najbolji začin je vrijeme — i ruka koja kuha za svoju obitelj.”</p>
+</section>
+
+<!-- divider -->
+<div class="divider wrap"><span class="ln"></span>
+  <svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+    <path d="M6 12c8-3 28-3 36 0-8 3-28 3-36 0Z"/><path d="M6 12c2-1 4-1 4-1M6 12c2 1 4 1 4 1"/><circle cx="40" cy="12" r="1.4" fill="currentColor" stroke="none"/>
+  </svg>
+  <span class="ln"></span>
+</div>
+
+<!-- STORY -->
+<section id="prica" class="story pad wrap">
+  <div class="chapter">
+    <div class="ch-media m1 reveal"><img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80" alt="Obiteljska kuhinja" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="ch-text reveal">
+      <span class="ch-num italic">i. — Obitelj</span>
+      <h3>Skriveni dragulj u srcu Vodica.</h3>
+      <p>Šimun je obiteljski restoran u koji se vraćate kao u nečiji dom. Iza pulta, za gradelama i u kuhinji stoji ista obitelj koja vas i pozdravi na vratima. Topla, neposredna usluga — bez žurbe, s puno srca.</p>
+    </div>
+  </div>
+  <div class="chapter">
+    <div class="ch-media m2 reveal"><img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=900&q=80" alt="Svježa riba" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="ch-text reveal">
+      <span class="ch-num italic">ii. — Svježa riba</span>
+      <h3>Ulov koji stigne istog jutra.</h3>
+      <p>Riba i plodovi mora biraju se svježi, prema onome što more da toga dana. Hobotnica, lignje, škampi, bijela riba — ono najbolje s Jadrana, pripremljeno jednostavno da okus mora ostane glavni.</p>
+    </div>
+  </div>
+  <div class="chapter">
+    <div class="ch-media m3 reveal"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Gradele i žar" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="ch-text reveal">
+      <span class="ch-num italic">iii. — Gradele &amp; peć</span>
+      <h3>S gradela i iz krušne peći.</h3>
+      <p>Riba i meso peku se na žaru, a pizza i tijesto u krušnoj peći. Domaća tjestenina s tartufima, lazanje, potpisne pizze „Šimun” i pizza s plodovima mora — sve nastaje uz živu vatru i pravo drvo.</p>
+    </div>
+  </div>
+  <div class="chapter">
+    <div class="ch-media m4 reveal"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80" alt="Doček rakijom" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="ch-text reveal">
+      <span class="ch-num italic">iv. — Doček rakijom</span>
+      <h3>Čašica domaće rakije za dobrodošlicu.</h3>
+      <p>Svakog gosta dočekamo onako kako dolikuje dalmatinskom domu — domaćom rakijom i osmijehom. To je naš način da kažemo: sjednite, opustite se, večeras ste kod nas za stolom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="divider wrap"><span class="ln"></span>
+  <svg viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+    <path d="M32 4c-3 3-3 13 0 16M32 4c3 3 3 13 0 16M24 8c2 2 2 6 0 8M40 8c-2 2-2 6 0 8M16 11c1 .6 1 1.4 0 2M48 11c-1 .6-1 1.4 0 2"/>
+  </svg>
+  <span class="ln"></span>
+</div>
+
+<!-- DISHES -->
+<section id="jela" class="dishes pad">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">S mora na stol</span>
+      <h2 class="reveal">Naša potpisna jela</h2>
+      <p class="reveal">Birano i pripremljeno svježe, prema ulovu i sezoni. Porcije obilne, na dalmatinski način.</p>
+    </div>
+    <div class="menu-cols">
+      <div class="menu-block reveal">
+        <h4 class="italic">S gradela &amp; iz mora</h4>
+        <div class="dish"><div class="name">Hobotnica s gradela <span class="hr italic">/ grilled octopus</span></div><div class="desc">Polako pečena na žaru, maslinovo ulje, mladi krumpir.</div></div>
+        <div class="dish"><div class="name">Lignje na žaru <span class="hr italic">/ grilled calamari</span></div><div class="desc">Svježe lignje, blitva i krumpir, kapljica limuna.</div></div>
+        <div class="dish"><div class="name">Plata plodova mora <span class="hr italic">/ seafood platter</span></div><div class="desc">Bogata pladnja za dijeljenje — ono najbolje s Jadrana.</div></div>
+        <div class="dish"><div class="name">Riba s gradela <span class="hr italic">/ fresh grilled fish</span></div><div class="desc">Dnevni ulov, jednostavno na žaru, prilog po izboru.</div></div>
+      </div>
+      <div class="menu-block reveal">
+        <h4 class="italic">Iz kuhinje &amp; krušne peći</h4>
+        <div class="dish"><div class="name">Domaća tjestenina s tartufima</div><div class="desc">Ručno valjana tjestenina, svježi tartuf, parmezan.</div></div>
+        <div class="dish"><div class="name">Domaće lazanje</div><div class="desc">Slojevi tijesta i umaka, pečene polako u peći.</div></div>
+        <div class="dish"><div class="name">Pizza „Šimun”</div><div class="desc">Naša potpisna pizza iz krušne peći, recept kuće.</div></div>
+        <div class="dish"><div class="name">Pizza s plodovima mora</div><div class="desc">Tanko tijesto, bogat dar mora, tek iz peći.</div></div>
+      </div>
+    </div>
+    <p class="menu-note reveal italic">Ulov i ponuda mijenjaju se prema sezoni — pitajte nas što je danas najsvježije.</p>
+  </div>
+</section>
+
+<!-- ATMOSFERA -->
+<section id="atmosfera" class="atmo pad wrap">
+  <blockquote class="reveal">Svjetlo svjećice, miris mora i <span>doček rakijom</span> — u srcu Vodica.</blockquote>
+  <p class="sub reveal">Toplo, neusiljeno mjesto za večeru pod večernjim nebom. Dođite kao gost, ostanite kao prijatelj — onako kako se to radi u dalmatinskim domovima.</p>
+</section>
+
+<!-- GALLERY -->
+<section id="galerija" class="pad wrap">
+  <div class="divider" style="padding-top:0">
+    <span class="ln"></span><span class="eyebrow">Galerija</span><span class="ln"></span>
+  </div>
+  <div class="gallery-grid">
+    <div class="gx tall"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Riba s gradela" loading="lazy" onerror="this.style.display='none'"><div class="cap"><span>miris dima i mora</span></div></div>
+    <div class="gx"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80" alt="Pizza iz peći" loading="lazy" onerror="this.style.display='none'"><div class="cap"><span>tijesto iz krušne peći</span></div></div>
+    <div class="gx"><img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=900&q=80" alt="Maslina i obala" loading="lazy" onerror="this.style.display='none'"><div class="cap"><span>maslina i kamen</span></div></div>
+    <div class="gx"><img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=900&q=80" alt="Stol uz svjećicu" loading="lazy" onerror="this.style.display='none'"><div class="cap"><span>topla svjetlost svjećice</span></div></div>
+    <div class="gx tall"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Plodovi mora" loading="lazy" onerror="this.style.display='none'"><div class="cap"><span>svjež ulov, obilna pladnja</span></div></div>
+    <div class="gx"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80" alt="Rakija dobrodošlice" loading="lazy" onerror="this.style.display='none'"><div class="cap"><span>rakija za doček</span></div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontakt">
+  <div class="wrap">
+    <div class="ft-quote italic reveal">Dobrodošli za naš stol.</div>
+    <p class="ft-tag reveal">Obitelj Šimun — svježa riba, domaća kuhinja i topli doček u srcu Vodica.</p>
+    <div class="ft-grid">
+      <div class="ft-col">
+        <h5>Lokacija</h5>
+        <p>U srcu Vodica<br>Dalmacija, Hrvatska</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Restoran+%26+Pizzeria+%C5%A0imun%2C+Vodice" target="_blank" rel="noopener">Pronađi nas na karti →</a>
+      </div>
+      <div class="ft-col">
+        <h5>Rezervacije</h5>
+        <p>Rezervirajte stol telefonom —<br>rado ćemo vas dočekati.</p>
+        <a href="tel:+38522440656">+385 22 440 656</a>
+      </div>
+      <div class="ft-col">
+        <h5>Priznanja</h5>
+        <p><span class="stars">★★★★</span> 4.4 · TripAdvisor<br>#8 od 86 restorana u Vodicama</p>
+        <p>Jezici: HR · EN · DE</p>
+      </div>
+    </div>
+    <a href="tel:+38522440656" class="ft-cta">Rezerviraj stol</a>
+    <div class="ft-bottom">© <span id="yr"></span> Restoran &amp; Pizzeria Šimun · Vodice, Dalmacija · Obiteljski vođen</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="mobile-bar">
+  <a href="https://www.google.com/maps/search/?api=1&query=Restoran+%26+Pizzeria+%C5%A0imun%2C+Vodice" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    Karta
+  </a>
+  <a href="tel:+38522440656" class="call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l1 4v3a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
+    Rezerviraj
+  </a>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // header scroll state
+  var header = document.getElementById('header');
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // mobile nav
+  var ham = document.getElementById('ham'), mnav = document.getElementById('mnav');
+  ham.addEventListener('click', function(){
+    var open = mnav.classList.toggle('open');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mnav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mnav.classList.remove('open'); document.body.style.overflow=''; });
+  });
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (window.gsap && window.ScrollTrigger){
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Lenis smooth scroll
+    var lenis = null;
+    if (window.Lenis && !reduced){
+      lenis = new Lenis({ duration:1.15, easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));}, smoothWheel:true });
+      gsap.ticker.add(function(time){ lenis.raf(time*1000); });
+      gsap.ticker.lagSmoothing(0);
+      lenis.on('scroll', ScrollTrigger.update);
+    }
+
+    // eased anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var id = a.getAttribute('href'); if(id.length<2) return;
+        var el = document.querySelector(id); if(!el) return;
+        e.preventDefault();
+        if (lenis){ lenis.scrollTo(el, {offset:-70}); }
+        else { el.scrollIntoView({behavior: reduced?'auto':'smooth'}); }
+      });
+    });
+
+    if (!reduced){
+      // slow fade-up reveals (1.0s — heritage tempo)
+      gsap.utils.toArray('.reveal').forEach(function(el){
+        gsap.to(el, {
+          opacity:1, y:0, duration:1.0, ease:'power2.out',
+          scrollTrigger:{ trigger:el, start:'top 88%' }
+        });
+      });
+
+      // gentle hero grid breathing parallax
+      gsap.to('.hero-grid', {
+        yPercent:8, ease:'none',
+        scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:1 }
+      });
+
+      // soft parallax on chapter media
+      gsap.utils.toArray('.ch-media img').forEach(function(img){
+        gsap.fromTo(img, {yPercent:-6}, {
+          yPercent:6, ease:'none',
+          scrollTrigger:{ trigger:img, start:'top bottom', end:'bottom top', scrub:1 }
+        });
+      });
+    } else {
+      gsap.set('.reveal', {opacity:1, y:0});
+    }
+  } else {
+    // GSAP failed — ensure content visible
+    document.querySelectorAll('.reveal').forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+  }
+})();
+</script>
+</body>
+</html>
